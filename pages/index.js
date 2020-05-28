@@ -90,78 +90,81 @@ const Home = (props) => {
 			<link rel="icon" href="/favicon.ico" />
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"> </script>
 		</Head>
-		<h1>DistaNet</h1>
-		<h2>Distancia En Tiempo Real</h2>
-		<br/><br/><br/>
-		<div style={{width: '100%'}}>
-			<div className="cont">
-				<div className="punto"></div>
-				<div className="regla">
+		<div style={{width: '1200px', margin: 'auto'}}>
 
-					<span className="dist cero"> <br/>0</span>
-					<span className="dist cero1"> <br/>1</span>
-					<span className="dist cero2"> <br/>2</span>
-					<span className="dist cero3"> <br/>3</span>
-					<span className="dist cero4"> <br/>4</span>
-					<span className="dist cero5"> <br/>5</span>
-					<span className="dist cero6"> <br/>6</span>
-					<span className="dist cero7"> <br/>7</span>
-					<span className="dist cero8"> <br/>8</span>
-					<span className="dist cero9"> <br/>9</span>
-					<span className="dist diez"> <br/>10</span>
-					<span className="dist diez1"><br/>11</span>
-					<span className="dist diez2"><br/>12</span>
-					<span className="dist diez3"><br/>13</span>
-					<span className="dist diez4"><br/>14</span>
-					<span className="dist diez5"><br/>15</span>
-					<span className="dist diez6"><br/>16</span>
-					<span className="dist diez7"><br/>17</span>
-					<span className="dist diez8"><br/>18</span>
-					<span className="dist diez9"><br/>19</span>
-					<span className="dist veinte"><br/> 20</span>
-					<span className="dist veinte1"><br/> 21</span>
-					<span className="dist veinte2"><br/> 22</span>
-					<span className="dist veinte3"><br/> 23</span>
-					<span className="dist veinte4"><br/> 24</span>
-					<span className="dist veinte5"><br/> 25</span>
-					<span className="dist veinte6"><br/> 26</span>
-					<span className="dist veinte7"><br/> 27</span>
-					<span className="dist veinte8"><br/> 28</span>
-					<span className="dist veinte9"><br/> 29</span>
-					<span className="dist treinta"> <br/> 30</span>
-					<span className="dist treinta1"><br/> 31</span>
-					<span className="dist treinta2"><br/> 32</span>
-					<span className="dist treinta3"><br/> 33</span>
-					<span className="dist treinta4"><br/> 34</span>
-					<span className="dist treinta5"><br/> 35</span>
-					<span className="dist treinta6"><br/> 36</span>
-					<span className="dist treinta7"><br/> 37</span>
-					<span className="dist treinta8"><br/> 38</span>
-					<span className="dist treinta9"><br/> 39</span>
-					<span className="dist cuarenta"><br/> 40</span>
+			<h1>DistaNet</h1>
+			<h2>Distancia En Tiempo Real</h2>
+			<br/><br/><br/>
+			<div style={{width: '100%'}}>
+				<div className="cont">
+					<div className="punto"></div>
+					<div className="regla">
+
+						<span className="dist cero"> <br/>0</span>
+						<span className="dist cero1"> <br/>1</span>
+						<span className="dist cero2"> <br/>2</span>
+						<span className="dist cero3"> <br/>3</span>
+						<span className="dist cero4"> <br/>4</span>
+						<span className="dist cero5"> <br/>5</span>
+						<span className="dist cero6"> <br/>6</span>
+						<span className="dist cero7"> <br/>7</span>
+						<span className="dist cero8"> <br/>8</span>
+						<span className="dist cero9"> <br/>9</span>
+						<span className="dist diez"> <br/>10</span>
+						<span className="dist diez1"><br/>11</span>
+						<span className="dist diez2"><br/>12</span>
+						<span className="dist diez3"><br/>13</span>
+						<span className="dist diez4"><br/>14</span>
+						<span className="dist diez5"><br/>15</span>
+						<span className="dist diez6"><br/>16</span>
+						<span className="dist diez7"><br/>17</span>
+						<span className="dist diez8"><br/>18</span>
+						<span className="dist diez9"><br/>19</span>
+						<span className="dist veinte"><br/> 20</span>
+						<span className="dist veinte1"><br/> 21</span>
+						<span className="dist veinte2"><br/> 22</span>
+						<span className="dist veinte3"><br/> 23</span>
+						<span className="dist veinte4"><br/> 24</span>
+						<span className="dist veinte5"><br/> 25</span>
+						<span className="dist veinte6"><br/> 26</span>
+						<span className="dist veinte7"><br/> 27</span>
+						<span className="dist veinte8"><br/> 28</span>
+						<span className="dist veinte9"><br/> 29</span>
+						<span className="dist treinta"> <br/> 30</span>
+						<span className="dist treinta1"><br/> 31</span>
+						<span className="dist treinta2"><br/> 32</span>
+						<span className="dist treinta3"><br/> 33</span>
+						<span className="dist treinta4"><br/> 34</span>
+						<span className="dist treinta5"><br/> 35</span>
+						<span className="dist treinta6"><br/> 36</span>
+						<span className="dist treinta7"><br/> 37</span>
+						<span className="dist treinta8"><br/> 38</span>
+						<span className="dist treinta9"><br/> 39</span>
+						<span className="dist cuarenta"><br/> 40</span>
+					</div>
 				</div>
 			</div>
-		</div>
-	<br/>
-		<h2>Historial De Distancias</h2>
+		<br/>
+			<h2>Historial De Distancias</h2>
 
-		<div className="line">
-			<Line data={chartData} redraw={true} options={{
-				scales: {
-					yAxes: [{
-						ticks: {
-							max: 40,
-							min: 0,
-							stepSize: 5
-						}
-					}]
-				},
-				maintainAspectRatio: false
-			}} />
-		</div>
+			<div className="line">
+				<Line data={chartData} redraw={true} options={{
+					scales: {
+						yAxes: [{
+							ticks: {
+								max: 40,
+								min: 0,
+								stepSize: 5
+							}
+						}]
+					},
+					maintainAspectRatio: false
+				}} />
+			</div>
 
-		<button onClick={handleMongo}>Activar</button>
-		<Footer />
+			<button onClick={handleMongo}>Activar</button>
+			<Footer />
+		</div>
 
 
 		<style jsx>{`	
@@ -353,7 +356,7 @@ const Home = (props) => {
 
 			.line {
 				margin: auto;
-				width: 80%;
+				width: 1200px;
 				height: 500px;
 			}
 
