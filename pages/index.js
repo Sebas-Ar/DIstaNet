@@ -90,7 +90,7 @@ const Home = (props) => {
 			<link rel="icon" href="/favicon.ico" />
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"> </script>
 		</Head>
-		<div style={{width: '1200px', margin: 'auto'}}>
+		<div style={{width: '1200px', margin: 'auto', padding: '0 20px'}}>
 
 			<h1>DistaNet</h1>
 			<h2>Distancia En Tiempo Real</h2>
@@ -161,8 +161,8 @@ const Home = (props) => {
 					maintainAspectRatio: false
 				}} />
 			</div>
-
-			<button onClick={handleMongo}>Activar</button>
+			<br/>
+			<button style={{opacity: '0'}} onClick={handleMongo}>Activar</button>
 			<Footer />
 		</div>
 
@@ -178,21 +178,22 @@ const Home = (props) => {
 				background: rgba(75, 192, 192, 0.8);
 				margin: 50px auto;
 				width: 200px;
-				padding: 10px;
-				border-radius: 35px;
+				padding: 10px 30px;
+				border-radius: 105px;
 				color: white;
 				font-size: 50px;
 				margin-bottom: 100px;
 			}
 
 			h2 {
+				font-size: 24px;
 				color: white;
 				background: rgba(75, 192, 192, 0.8);
-				width: 270px;
+				width: 300px;
 				text-align: center;
 				margin: 50px auto;
-				border-radius: 20px;
-				padding: 10px;
+				border-radius: 70px;
+				padding: 10px 30px;
 			}
 
 			.cont {
