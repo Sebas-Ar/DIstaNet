@@ -4,6 +4,7 @@ import mqtt from "mqtt";
 import Head from 'next/head'
 import axios from "axios";
 import Footer from '../components/Footer'
+// cambio
 
 const Home = (props) => {
 
