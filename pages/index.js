@@ -93,7 +93,7 @@ const Home = (props) => {
 		</Head>
 		<div style={{width: '1200px', margin: 'auto', padding: '0 20px'}}>
 
-			<h1>DistaNet</h1>
+			<h1>Hola</h1>
 			<h2>Distancia En Tiempo Real</h2>
 			<br/><br/><br/>
 			<div style={{width: '100%'}}>
